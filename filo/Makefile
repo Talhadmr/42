@@ -1,4 +1,4 @@
-SRCS			=	functions.c main.c
+SRCS			=	functions.c main.c fill.c
 OBJS			= $(SRCS:.c=.o)
 
 
