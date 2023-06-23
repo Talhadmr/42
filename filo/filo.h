@@ -25,7 +25,7 @@ typedef struct s_data
     int time_to_eat;
     int time_to_sleep;
     int number_of_times_each_philosopher_must_eat;
-    int exact_time;
+    unsigned long exact_time;
     t_filo *philos;  
     pthread_mutex_t	*forks;
 }           t_data;

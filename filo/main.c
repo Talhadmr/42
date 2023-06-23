@@ -12,3 +12,4 @@ int main(int ac, char **av)
     ft_fill(&data);
         
 }
+ 

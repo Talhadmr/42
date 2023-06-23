@@ -5,6 +5,7 @@ unsigned long	get_time(void)
 
 	gettimeofday(&time, NULL);
 	return ((time.tv_sec * (unsigned long)1000) + (time.tv_usec / 1000));
+	
 }
 
 int ft_isntnum(int ac , char **av)

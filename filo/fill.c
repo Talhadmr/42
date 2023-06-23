@@ -49,6 +49,6 @@ int ft_init(int ac, char **av, t_data *data)
     if (ac == 6)
         data->number_of_times_each_philosopher_must_eat = ft_atoi(av[5]);
     data->exact_time = get_time();
-    printf("%d", data->exact_time);
+    printf("%lu", data->exact_time);
     return (0);
 }
