@@ -20,8 +20,10 @@ void fill_philos(t_data *data)
     while(i < data->number_of_philosopher)
     {
         data->philos[i].pos = i + 1;
+        data->philos[i].posstr = ft_itoa(data->philos[i].pos);
         data->philos[i].rfork = i;
         data->philos[i].lfork = (i + 1) % data->number_of_philosopher;
+        data->philos[i].data = data;
         i++;
     }
 }
@@ -40,7 +42,7 @@ int ft_fill(t_data *data)
 
 
 
-int ft_init(int ac, char **av, t_data *data)
+int ft_arg(int ac, char **av, t_data *data)
 {
     data->number_of_philosopher = ft_atoi(av[1]);
     data->time_to_die = ft_atoi(av[2]);
@@ -49,6 +51,5 @@ int ft_init(int ac, char **av, t_data *data)
     if (ac == 6)
         data->number_of_times_each_philosopher_must_eat = ft_atoi(av[5]);
     data->exact_time = get_time();
-    printf("%lu", data->exact_time);
     return (0);
 }
