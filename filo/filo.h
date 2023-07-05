@@ -8,7 +8,6 @@
 # include <stdio.h>
 # include <sys/time.h>
 
-struct s_data
 
 typedef struct s_filo
 {
@@ -38,7 +37,7 @@ int ft_arg(int ac, char **av, t_data *data);
 int ft_fill(t_data *data);
 unsigned long	get_time(void);
 char	*ft_itoa(int n);
-//void ft_run_pr(t_data *data);
+void ft_run_pr(t_data *data);
 
 
 #endif

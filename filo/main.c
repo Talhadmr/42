@@ -10,7 +10,8 @@ int main(int ac, char **av)
         write(1, "error\n", 6);
     ft_arg(ac, av, &data);
     ft_fill(&data);
-    // ft_run_pr(&data);
+    ft_run_pr(&data);
         
 }
  
+
