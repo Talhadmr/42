@@ -9,7 +9,7 @@ void	philo_dead(t_data *data, t_filo *philo)
 		while (++i < data->number_of_philosopher && !data->stop_condition)
 		{
 			pthread_mutex_lock(&data->meal);
-			if ((int)(get_time() - philo[i].last_ate) >= data->time_to_die)
+			if ((get_time() - philo[i].last_ate) >= data->time_to_die)
 			{
 				philo_print("died", &philo[i]);
 				data->stop_condition = 1;
@@ -53,12 +53,12 @@ void ft_run_pr(t_data *data) {
                    &(data->philos[i]));
     i++;
   }
+  philo_dead(data, data->philos);
   i = 0;
   while (i < data->number_of_philosopher)
   {
       pthread_join(data->philos[i].thread_id, NULL);
       i++;
   }
-  philo_dead(data, data->philos);
 }
 
