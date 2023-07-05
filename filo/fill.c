@@ -23,7 +23,7 @@ void fill_philos(t_data *data) {
     data->philos[i].lfork = (i + 1) % data->number_of_philosopher;
     data->philos->ate_times = 0;
     data->philos[i].data = data;
-
+    data->philos[i].last_ate = data->exact_time;
     i++;
   }
 }
@@ -41,6 +41,7 @@ int ft_fill(t_data *data) {
 
 int ft_arg(int ac, char **av, t_data *data) {
   data->stop_condition = 0;
+
   data->max_ate = 0;
   data->number_of_philosopher = ft_atoi(av[1]);
   data->time_to_die = ft_atoi(av[2]);

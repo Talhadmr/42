@@ -22,11 +22,11 @@ typedef struct s_data {
   int stop_condition;
   int				max_ate;
   int number_of_philosopher;
-  int time_to_die;
-  int time_to_eat;
-  int time_to_sleep;
+  unsigned long int time_to_die;
+  unsigned long int time_to_eat;
+  unsigned long int time_to_sleep;
   int number_of_times_each_philosopher_must_eat;
-  unsigned long exact_time;
+  unsigned long int exact_time;
   t_filo *philos;
   pthread_mutex_t *forks;
 	pthread_mutex_t	meal;
