@@ -1,3 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   functions2.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tdemir <tdemir@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/05 18:29:49 by tdemir            #+#    #+#             */
+/*   Updated: 2023/07/05 18:29:50 by tdemir           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+
 #include "filo.h"
 void philo_print(char *msg, t_filo *philo) {
   char *timestamp;
@@ -26,10 +39,10 @@ void ft_eat(t_filo *philo) {
   philo_print("has taken a fork", philo);
   pthread_mutex_lock(&philo->data->forks[philo->rfork]);
   philo_print("has taken a fork", philo);
-  pthread_mutex_lock(&philo->data->meal);
+  //pthread_mutex_lock(&philo->data->meal);
   philo_print("is eating", philo);
   philo->last_ate = get_time();
-  pthread_mutex_unlock(&philo->data->meal);
+  //pthread_mutex_unlock(&philo->data->meal);
   ft_sleep(philo->data->time_to_eat, philo->data);
   philo->ate_times++;
   pthread_mutex_unlock(&philo->data->forks[philo->lfork]);

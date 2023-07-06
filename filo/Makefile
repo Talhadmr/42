@@ -4,12 +4,12 @@ OBJS			= $(SRCS:.c=.o)
 
 CC				= gcc
 RM				= rm -f
-CFLAGS			= -Wall -Wextra -Werror -I.
+CFLAGS			= -Wall -Wextra -Werror 
 
 LIB_NAME			= philo.a
 NAME				= philo
 
-all:			$(NAME) 
+all:			$(NAME) ""
 
 $(NAME):		$(LIB_NAME)
 				$(CC) $(CFLAGS) -o $(NAME) $(LIB_NAME)

@@ -35,7 +35,7 @@ typedef struct s_data {
 
 int ft_atoi(const char *str);
 int ft_isntnum(int ac, char **av);
-int ft_arg(int ac, char **av, t_data *data);
+void ft_arg(int ac, char **av, t_data *data)  ;
 int ft_fill(t_data *data);
 unsigned long get_time(void);
 char *ft_itoa(int n);
